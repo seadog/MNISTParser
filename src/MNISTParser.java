@@ -61,7 +61,7 @@ public class MNISTParser {
 			BufferedImage image = new BufferedImage(cols, rows,  BufferedImage.TYPE_BYTE_GRAY);
 			for(int i = 0; i < rows; i++){
 				for(int j = 0; j < cols; j++){
-					int grey_value = 255 - (image_data[byte_index] & 0xFF);
+					int grey_value = image_data[byte_index] & 0xFF;
 					if(grey_value < 0 || grey_value > 255) {
 						System.out.println("Pixel value error!");
 						System.exit(0);
